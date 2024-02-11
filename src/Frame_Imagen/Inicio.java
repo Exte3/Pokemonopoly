@@ -79,13 +79,9 @@ public class Inicio extends javax.swing.JFrame {
         // File fr=new File(monopolis.Monopolis.FILE_NAME);
         if (Bienvenida.correcto == true) {
             setVisible(false);// ya recibimos la cantidad de jugadores
-            try {// leimos los archivos
-                monopolis.Monopolis.leerPropiedades();// propiedades
-                monopolis.Monopolis.leerTarjetas(monopolis.Monopolis.FILE_NAME1);
-                monopolis.Monopolis.leerTarjetas(monopolis.Monopolis.FILE_NAME2);
-            } catch (IOException ex) {
-                Logger.getLogger(Inicio.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            monopolis.Monopolis.leerPropiedades();// propiedades
+            monopolis.Monopolis.leerTarjetas(monopolis.Monopolis.FILE_NAME1);
+            monopolis.Monopolis.leerTarjetas(monopolis.Monopolis.FILE_NAME2);
         } else {
 
             JOptionPane.showMessageDialog(null, "Debe ingresar primero cuantos jugadores son");

@@ -1,0 +1,11 @@
+Evento;Efecto;Monto
+false;"¡Has Perdido la batalla! contra Cazabichos pierdes $10";10
+false;"Has Perdido contra Petra, pierdes $20";20
+false;"Has perdido contra Marcial, pierdes $30";30
+false;"Has perdido contra Erico, pierdes $40";40
+false;"Has perdido contra Candela, pierdes $50";50
+false;"Has perdido contra Norman, pierdes $60";60
+false;"Has perdido contra Alana, pierdes $70";70
+false;"Has perdido contra Vito y Leti, pierdes $80";80
+false;"Has perdido contra Galano, pierdes $90";90
+false;"Has perdido la liga, pierdes $100";100

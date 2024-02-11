@@ -22,8 +22,8 @@ public class Monopolis {
     public static Tarjeta[] barajaTarjetasSuerte = new Tarjeta[10];
     public static Tarjeta[] barajaTarjetasComunidad = new Tarjeta[10];
     public static String FILE_NAME = "Propiedades.csv";
-    public static String FILE_NAME1 = "Suerte.txt";
-    public static String FILE_NAME2 = "Comunidad.txt";
+    public static String FILE_NAME1 = "/Datos/Suerte.csv";
+    public static String FILE_NAME2 = "/Datos/Comunidad.csv";
     public static boolean go = false;
 
     public static void main(String[] args) {
@@ -100,36 +100,31 @@ public class Monopolis {
         }
     }
 
-    public static void leerTarjetas(String fileName) throws IOException {
-        try {
-            FileReader fr = new FileReader(fileName);
-            BufferedReader br = new BufferedReader(fr);
-            String line = br.readLine();
+    public static void leerTarjetas(String fileName) {
+        try (
+                InputStream inputStream = Monopolis.class.getResourceAsStream(fileName);
+                BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
+
+            // Leer y descartar la primera línea (encabezado)
+            br.readLine();
+
+            String line;
             int contadorSuerte = 0;
             int contadorComunidad = 0;
 
-            while (line != null) {
-                String tar = line;
-                String texto = br.readLine();
-                int plata = Integer.parseInt(br.readLine());
-                boolean tarj = tar.equals("true");
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(";"); // Separar la línea en partes usando la coma como delimitador
+
+                boolean tarj = Boolean.parseBoolean(parts[0]); // El primer valor es el evento
+                String texto = parts[1]; // El segundo valor es el efecto
+                int plata = Integer.parseInt(parts[2]); // El tercer valor es el monto
 
                 if (tarj) {
                     barajaTarjetasSuerte[contadorSuerte++] = new Tarjeta(tarj, texto, plata);
                 } else {
                     barajaTarjetasComunidad[contadorComunidad++] = new Tarjeta(tarj, texto, plata);
                 }
-
-                // No es recomendable imprimir aquí, pero se mantiene por el ejemplo
-                // System.out.println("tarjeta " + tar);
-                // System.out.println("texto " + texto);
-                // System.out.println("plata " + plata);
-
-                line = br.readLine(); // Leemos la siguiente línea
             }
-
-            fr.close();
-            br.close();
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "No se encontró el archivo " + fileName);
         }
