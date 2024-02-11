@@ -1,9 +1,7 @@
 
 package monopolis;
 
-
-public class Propiedades {
-
+public class Propiedad {
 
     private String nombrePro;
     private String propietario;
@@ -11,6 +9,7 @@ public class Propiedades {
     private int renta;
     private int posicion;
     private boolean tarjeta;
+
     public boolean getTarjeta() {
         return tarjeta;
     }
@@ -18,23 +17,25 @@ public class Propiedades {
     public void setTarjeta(boolean tarjeta) {
         this.tarjeta = tarjeta;
     }
-    
-    public Propiedades(){
-        this.nombrePro=nombrePro;
-        this.propietario=propietario;
-        this.precio=precio;
-        this.renta=renta;
-        this.posicion=posicion;
-        this.tarjeta=tarjeta;
+
+    public Propiedad() {
+        this.nombrePro = nombrePro;
+        this.propietario = propietario;
+        this.precio = precio;
+        this.renta = renta;
+        this.posicion = posicion;
+        this.tarjeta = tarjeta;
     }
-    public Propiedades(String n,String p,int pre,int r,int pos,boolean tar){
-        this.nombrePro=n;
-        this.propietario=p;
-        this.precio=pre;
-        this.renta=r;
-        this.posicion=pos;
-        this.tarjeta=tar;
+
+    public Propiedad(String n, String p, int pre, int r, int pos, boolean tar) {
+        this.nombrePro = n;
+        this.propietario = p;
+        this.precio = pre;
+        this.renta = r;
+        this.posicion = pos;
+        this.tarjeta = tar;
     }
+
     public String getPropietario() {
         return propietario;
     }
@@ -66,14 +67,13 @@ public class Propiedades {
     public void setPosicion(int posicion) {
         this.posicion = posicion;
     }
-    
-        public String getNombrePro() {
+
+    public String getNombrePro() {
         return nombrePro;
     }
 
     public void setNombrePro(String nombrePro) {
         this.nombrePro = nombrePro;
     }
-    
-    
+
 }

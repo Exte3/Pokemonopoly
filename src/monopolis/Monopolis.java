@@ -13,7 +13,7 @@ import java.io.IOException;
 
 @SuppressWarnings("unused")
 public class Monopolis {
-    public static ArrayList<Propiedades> proBanco = new ArrayList();
+    public static ArrayList<Propiedad> proBanco = new ArrayList();
     public static ArrayList<Jugador> jugadores = new ArrayList();
     public static int turno = 0;
     public static int nPlayers = 2;
@@ -54,20 +54,15 @@ public class Monopolis {
         tablero.setVisible(go);
     }
 
-    // -.Funciones.-//
-
-    // Función para lanzar un dado y devolver el resultado
     public static int lanzarDado() {
         return (int) (Math.random() * 6 + 1);
     }
 
-    // Función para seleccionar aleatoriamente una tarjeta de un array de Tarjetas
     public static Tarjeta seleccionarTarjetaAleatoria(Tarjeta[] tar) {
         int random = (int) (Math.random() * 9 + 0);
         return tar[random];
     }
 
-    // Función para leer datos desde un archivo y crear objetos Propiedades
     public static void leerPropiedades() {
         try {
             FileReader fr = new FileReader(FILE_NAME);
@@ -82,7 +77,7 @@ public class Monopolis {
                 int pos = Integer.parseInt(br.readLine());
                 boolean tarjeta = Boolean.parseBoolean(br.readLine());
 
-                proBanco.add(new Propiedades(nombre, dueno, precio, renta, pos, tarjeta));
+                proBanco.add(new Propiedad(nombre, dueno, precio, renta, pos, tarjeta));
 
                 line = br.readLine(); // Leer la siguiente línea
             }
