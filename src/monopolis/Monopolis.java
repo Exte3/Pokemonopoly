@@ -257,11 +257,4 @@ public class Monopolis {
             turno = 0;
         }
     }
-
-    // mofificar nombres...
-
-    // sería inciializada la base de datos
-
-    // Datos.Conexion.ConsultaConRetorno();
-    // conex.ConsultaSinRetorno();
 }
