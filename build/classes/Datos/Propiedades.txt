@@ -1,0 +1,240 @@
+_Casa_
+Banco
+0
+0
+0
+false
+_Pueblo Escaso_
+Comprar
+60
+30
+1
+false
+_Aredia_
+Banco
+0
+0
+2
+true
+_Ciudad Petalia_
+Comprar
+60
+30
+3
+false
+_Compra una Pocion_
+Banco
+0
+200
+4
+false
+_S.S Marea_
+Comprar
+200
+100
+5
+false
+_Sr- Aranque_
+Comprar
+100
+50
+6
+false
+_Batalla_
+Banco
+0
+0
+7
+true
+_Devon S.A_
+Comprar
+100
+50
+8
+false
+_Pueblo Azulina_
+Comprar
+120
+60
+9
+false
+_Centro Pokemon_
+Banco
+0
+0
+10
+false
+_C. Malvalona_
+Comprar
+140
+70
+11
+false
+_Guarderia_
+Comprar
+150
+75
+12
+false
+_Pueblo Verdegal_
+Comprar
+140
+70
+13
+false
+_Pueblo Pardal_
+Comprar
+160
+80
+14
+false
+_Tienda de Bicis_
+Comprar
+200
+100
+15
+false
+_Tutor de Movimientos_
+Comprar
+50
+25
+16
+false
+_Aredia_
+Banco
+0
+0
+17
+true
+_Cueva meteoro_
+Comprar
+180
+90
+18
+false
+_Pueblo lavacalda_
+Comprar
+200
+100
+19
+false
+_Base Secreta_
+Banco
+0
+0
+20
+false
+_Ciudad Arborada_
+Comprar
+220
+110
+21
+false
+_Batalla_
+Banco
+0
+0
+22
+true
+_C.C Calagua_
+Comprar
+220
+110
+23
+false
+_Motel Aguacala_
+Comprar
+240
+120
+24
+false
+_Teleférico_
+Comprar
+200
+100
+25
+false
+_Cuidad Alagaria_
+Comprar
+260
+130
+26
+false
+_Arrecípolis_
+Comprar
+260
+130
+27
+false
+_Mudanza Pokemon S.A_
+Comprar
+150
+75
+28
+false
+_Latias_
+Comprar
+280
+140
+29
+false
+_Centro Poke_
+Banco
+0
+0
+30
+false
+_Latios_
+Comprar
+300
+150
+31
+false
+_Kyogre_
+Comprar
+300
+150
+32
+false
+_Areadia_
+Banco
+0
+0
+33
+true
+_Groudon_
+Comprar
+320
+160
+34
+false
+_SS Marea Clagua_
+Comprar
+200
+100
+35
+false
+_Batalla_
+Banco
+0
+0
+36
+true
+_Liga pokemon_
+Comprar
+350
+175
+37
+false
+_Compra una Pocion_
+Banco
+0
+200
+38
+false
+_Rayquaza_
+Comprar
+400
+200
+39
+false
