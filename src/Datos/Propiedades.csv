@@ -1,0 +1,41 @@
+Nombre,Dueno,Precio,Renta,Posicion,Tarjeta
+Casa,Banco,0,0,0,false
+Pueblo Escaso,Comprar,60,30,1,false
+Aredia,Banco,0,0,2,true
+Ciudad Petalia,Comprar,60,30,3,false
+Compra una Pocion,Banco,0,200,4,false
+S.S Marea,Comprar,200,100,5,false
+Sr- Aranque,Comprar,100,50,6,false
+Batalla,Banco,0,0,7,true
+Devon S.A,Comprar,100,50,8,false
+Pueblo Azulina,Comprar,120,60,9,false
+Centro Pokemon,Banco,0,0,10,false
+C. Malvalona,Comprar,140,70,11,false
+Guarderia,Comprar,150,75,12,false
+Pueblo Verdegal,Comprar,140,70,13,false
+Pueblo Pardal,Comprar,160,80,14,false
+Tienda de Bicis,Comprar,200,100,15,false
+Tutor de Movimientos,Comprar,50,25,16,false
+Aredia,Banco,0,0,17,true
+Cueva meteoro,Comprar,180,90,18,false
+Pueblo lavacalda,Comprar,200,100,19,false
+Base Secreta,Banco,0,0,20,false
+Ciudad Arborada,Comprar,220,110,21,false
+Batalla,Banco,0,0,22,true
+C.C Calagua,Comprar,220,110,23,false
+Motel Aguacala,Comprar,240,120,24,false
+Teleférico,Comprar,200,100,25,false
+Cuidad Alagaria,Comprar,260,130,26,false
+Arrecípolis,Comprar,260,130,27,false
+Mudanza Pokemon S.A,Comprar,150,75,28,false
+Latias,Comprar,280,140,29,false
+Centro Poke,Banco,0,0,30,false
+Latios,Comprar,300,150,31,false
+Kyogre,Comprar,300,150,32,false
+Areadia,Banco,0,0,33,true
+Groudon,Comprar,320,160,34,false
+SS Marea Clagua,Comprar,200,100,35,false
+Batalla,Banco,0,0,36,true
+Liga pokemon,Comprar,350,175,37,false
+Compra una Pocion,Banco,0,200,38,false
+Rayquaza,Comprar,400,200,39,false

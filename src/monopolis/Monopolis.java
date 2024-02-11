@@ -10,6 +10,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 @SuppressWarnings("unused")
 public class Monopolis {
@@ -19,7 +21,7 @@ public class Monopolis {
     public static int nPlayers = 2;
     public static Tarjeta[] barajaTarjetasSuerte = new Tarjeta[10];
     public static Tarjeta[] barajaTarjetasComunidad = new Tarjeta[10];
-    public static String FILE_NAME = "Propiedades.txt";
+    public static String FILE_NAME = "Propiedades.csv";
     public static String FILE_NAME1 = "Suerte.txt";
     public static String FILE_NAME2 = "Comunidad.txt";
     public static boolean go = false;
@@ -64,26 +66,35 @@ public class Monopolis {
     }
 
     public static void leerPropiedades() {
-        try {
-            FileReader fr = new FileReader(FILE_NAME);
-            BufferedReader br = new BufferedReader(fr);
-            String line = br.readLine();
+        String FILE_NAME = "/Datos/Propiedades.csv"; // Ruta del archivo
+        String DELIMITER = ","; // Delimitador CSV
 
-            while (line != null) {
-                String nombre = line;
-                String dueno = br.readLine();
-                int precio = Integer.parseInt(br.readLine());
-                int renta = Integer.parseInt(br.readLine());
-                int pos = Integer.parseInt(br.readLine());
-                boolean tarjeta = Boolean.parseBoolean(br.readLine());
-
-                proBanco.add(new Propiedad(nombre, dueno, precio, renta, pos, tarjeta));
-
-                line = br.readLine(); // Leer la siguiente línea
+        try (
+                InputStream inputStream = Monopolis.class.getResourceAsStream(FILE_NAME);
+                BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
+            String line = br.readLine(); // Leer la cabecera
+            if (line == null) {
+                System.out.println("El archivo CSV está vacío.");
+                return;
             }
 
-            fr.close();
-            br.close();
+            // Leer las propiedades
+            while ((line = br.readLine()) != null) {
+                String[] datos = line.split(DELIMITER);
+                if (datos.length != 6) {
+                    System.out.println("Error al leer la línea del archivo CSV: " + line);
+                    continue;
+                }
+
+                String nombre = datos[0].trim();
+                String dueno = datos[1].trim();
+                int precio = Integer.parseInt(datos[2].trim());
+                int renta = Integer.parseInt(datos[3].trim());
+                int pos = Integer.parseInt(datos[4].trim());
+                boolean tarjeta = Boolean.parseBoolean(datos[5].trim());
+
+                proBanco.add(new Propiedad(nombre, dueno, precio, renta, pos, tarjeta));
+            }
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "No se encontró el archivo " + FILE_NAME);
         }
